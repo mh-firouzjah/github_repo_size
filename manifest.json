@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Repo Size",
+  "version": "1.0",
+  "description": "Shows the size of a GitHub repo",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/copilot-16.svg",
+      "48": "icons/copilot-48.svg",
+      "96": "icons/copilot-96.svg"
+    }
+  },
+  "icons": {
+    "16": "icons/copilot-16.svg",
+    "48": "icons/copilot-48.svg",
+    "96": "icons/copilot-96.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://github.com/*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
